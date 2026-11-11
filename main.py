@@ -74,9 +74,9 @@ async def on_message(message):
 
     async with message.channel.typing():
       try:
-        # Gọi Gemini AI xử lý kèm nhân cách Chỉ huy
+        # Đã cập nhật lên model gemini-3.8-flash mới nhất
         response = gemini_client.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-3.8-flash',
             contents=clean_content,
             config={
                 'system_instruction': SYSTEM_INSTRUCTION,
